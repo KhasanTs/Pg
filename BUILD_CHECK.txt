@@ -1,0 +1,7 @@
+RuVideoHub 14.1 static preflight
+===============================
+Kotlin source files checked: 21
+Android/Gradle compilation: NOT run here (Android SDK/Gradle unavailable in this environment).
+GitHub Actions is the authoritative build check.
+Static errors found: 0
+No stale source references or unbalanced braces found.

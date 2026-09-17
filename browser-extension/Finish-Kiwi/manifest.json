@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Video to Player Kiwi — Finish (RuVideoHub companion)",
+  "version": "14.1.0",
+  "description": "Браузерный помощник RuVideoHub: обнаружение HLS/DASH/видео на страницах и открытие во внешнем плеере.",
+  "permissions": [
+    "webRequest",
+    "webNavigation",
+    "tabs",
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    },
+    "default_title": "Видеопотоки"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-hook.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

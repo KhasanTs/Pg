@@ -1,0 +1,13 @@
+<resources>
+    <style name="Theme.RuVideoHub" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">#E50914</item>
+    </style>
+
+    <style name="Theme.RuVideoHub.Player" parent="Theme.RuVideoHub">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

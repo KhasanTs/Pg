@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Mail.ru Video → External Player",
+  "version": "3.2.0",
+  "description": "Mail.ru: реальные качества из метаданных, выбор качества и внешний Android-плеер.",
+  "permissions": [
+    "tabs",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Mail.ru Video"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.ru/*",
+        "https://*.mail.ru/*",
+        "https://my.mail.ru/*",
+        "https://*.my.mail.ru/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
